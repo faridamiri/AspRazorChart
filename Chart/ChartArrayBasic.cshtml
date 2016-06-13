@@ -1,0 +1,17 @@
+﻿@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Simple Chart from Array";
+}
+
+@{
+    var myChart = new Chart(width: 600, height: 400)
+        .AddTitle("Product/Price(CZK)")
+      //  .AddLegend("Product Name","Price CZK")
+      //  .SetXAxis("Product Name")
+      //  .SetYAxis("Price")
+        .AddSeries(
+            name: "Product",
+            xValue: new[] { "PC", "Notebook", "Desk", "Chair", "Cell phone" },
+            yValues: new[] { "12000", "6000", "4000", "1500", "3000" })
+        .Write();
+}

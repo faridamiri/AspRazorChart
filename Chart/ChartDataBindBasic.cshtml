@@ -1,0 +1,13 @@
+﻿@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Simple Chart from data base";
+}
+@{
+    var db = Database.Open("databaseProduct");
+
+    var dbdata = db.Query("SELECT ProductName , Price FROM TblProducts");
+    var myChart = new Chart(width: 600, height: 400)
+       .AddTitle("Product/Price(CZK) ")
+       .DataBindTable(dataSource: dbdata, xField: "Name")
+       .Write();
+}
