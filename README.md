@@ -1,4 +1,4 @@
-# AspRazorChart
+# Asp Razor Chart
 ##charting with Razor In Asp.net
 
 
